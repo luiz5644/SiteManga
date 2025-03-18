@@ -1,2 +1,2 @@
 # SiteManga
-neste repositório, vou colocar apenas a paginas de cadastro/login de usuários, essaa paginas fazem parte de um projeto de web1 ADS.
+As paginas web que estarão neste repositorio, fazem parte de um projeto de web1 ADS, a ideia é ter um site onde podemos ler mangas.
