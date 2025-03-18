@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recuperar Senha</title>
+    <style>
+        *{
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+        font-family: "Poppins", sans-serif;
+
+        }
+        body{
+    
+            background: url(imagens/pexels-fmaderebner-869258.jpg);
+            background-size: 400% 400%;
+            background-position: center;
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .container {
+            width: 420px;
+            background: transparent;
+            border: 2px solid rgb(255, 255, 255, .2);
+            backdrop-filter: blur(8px);
+            border-radius: 10px;
+            padding: 30px 40px;
+        }
+        .container>h2{
+            text-align: center;
+        }
+        input {
+            width: 100%;
+            height: 100%;
+            background: transparent;
+            border: none;
+            outline: none;
+            border: 2px solid rgba(255, 255, 255, 0.2);
+            border-radius: 10px;
+            font-size: 16px;
+            color: #fff;
+            padding: 5px;
+            margin: 8px;
+            margin-left: 0px;
+        }
+        
+        
+        .container>p{
+            padding-top: 10px;
+            padding-bottom: 10px;
+            text-align: center;
+        }
+
+        .container>p>a{
+            font-size: 16px;
+            color: rgb(1, 1, 1);
+            font-weight: 700;
+            text-decoration: none;
+            
+        }
+        .botão-enviar{
+            width: 100%;
+            height: 50px;
+            background-color: rgb(177, 82, 232);
+            border-radius: 10px;
+            color: rgb(0, 0, 0);
+            font-weight: 500px;
+            margin-top: 24px;
+            cursor: pointer;
+            outline: none;
+            font-size: 16px;
+            border-color: #ffffff00;
+        
+        }
+        .botão-enviar:hover{
+        background-color: rgba(145, 62, 193, 0.687);
+
+        }
+        .link{
+            font-size: 16px;
+            margin-top: 20px; 
+            display: block; 
+            text-align: center; 
+            color: #000000;
+            text-decoration: none;
+            font-weight: 700;
+            
+            
+        }
+        
+        
+        .link:hover{
+            text-decoration: underline;
+        }
+    </style>
+    <script>
+        function showConfirmation(event) {
+            event.preventDefault();
+            document.querySelector('.container').innerHTML = "<h2>Email Enviado!</h2><p>Verifique sua caixa de entrada para redefinir sua senha.</p>";
+            setTimeout(() => {
+                window.location.href = 'login.html';
+            }, 3000);
+        }
+    </script>
+</head>
+<body>
+    <div class="container">
+        <h2>Recuperar Senha</h2>
+        <p>Insira seu email para receber um link de redefinição de senha.</p>
+        <form onsubmit="showConfirmation(event)">
+            <input type="email" name="email" placeholder="Digite seu email" required>
+            <button type="submit" class="botão-enviar">Enviar Link</button>
+        </form>
+        <a href="login.html" class="link">Voltar para login</a>
+    </div>
+</body>
+</html>
